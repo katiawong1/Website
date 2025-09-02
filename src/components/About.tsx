@@ -1,7 +1,7 @@
 import { Award, Users, Clock, Star } from "lucide-react";
 
 const About = () => {
-  const portraitImageUrl = "https://raw.githubusercontent.com/daveenci-ai/e-taxcpa-images/refs/heads/main/kate_wong_edited_light_grey_002.jpeg";
+  const portraitImageUrl = "https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/kate_wong_edited_light_grey_002.jpeg";
   const stats = [
     {
       icon: <Users className="h-8 w-8" />,

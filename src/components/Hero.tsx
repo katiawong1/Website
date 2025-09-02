@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle, ArrowRight, ArrowLeft } from "lucide-react";
-const advisorImageUrl = "https://raw.githubusercontent.com/daveenci-ai/e-taxcpa-images/refs/heads/main/kate_wong_edited_light_grey_001.jpeg";
+const advisorImageUrl = "https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/kate_wong_edited_light_grey_001.jpeg";
 
 const Hero = () => {
   const [currentStep, setCurrentStep] = useState(1);
