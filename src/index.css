@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional CPA Design System - All colors, gradients, fonts, etc defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Core brand colors */
+    --background: 0 0% 100%;
+    --foreground: 215 28% 17%;
+
+    /* Professional navy palette */
+    --primary: 215 84% 16%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 215 50% 25%;
+    --primary-dark: 215 84% 12%;
+
+    /* Professional teal accent */
+    --accent: 192 84% 45%;
+    --accent-foreground: 0 0% 98%;
+    --accent-light: 192 84% 55%;
+    --accent-muted: 192 30% 85%;
+
+    /* Gold highlight for trust */
+    --gold: 45 93% 47%;
+    --gold-foreground: 215 28% 17%;
+    --gold-light: 45 93% 55%;
+    --gold-muted: 45 30% 92%;
+
+    /* Neutral grays */
+    --secondary: 215 16% 93%;
+    --secondary-foreground: 215 28% 17%;
+    --muted: 215 16% 96%;
+    --muted-foreground: 215 13% 47%;
+
+    /* UI elements */
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+    --border: 215 14% 89%;
+    --input: 215 14% 89%;
+    --ring: 192 84% 45%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+
+    /* Design tokens */
+    --radius: 0.75rem;
+    
+    /* Professional gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(215 84% 16%) 0%, hsl(215 50% 25%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(192 84% 45%) 0%, hsl(192 84% 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(215 84% 16%) 0%, hsl(192 84% 45%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(215 16% 98%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px hsl(215 28% 17% / 0.05);
+    --shadow-md: 0 4px 6px hsl(215 28% 17% / 0.07), 0 2px 4px hsl(215 28% 17% / 0.06);
+    --shadow-lg: 0 10px 15px hsl(215 28% 17% / 0.1), 0 4px 6px hsl(215 28% 17% / 0.05);
+    --shadow-professional: 0 20px 40px hsl(215 28% 17% / 0.1);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 215 28% 8%;
+    --foreground: 0 0% 98%;
+
+    --primary: 192 84% 55%;
+    --primary-foreground: 215 28% 8%;
+    --primary-light: 192 84% 65%;
+    --primary-dark: 192 84% 45%;
+
+    --accent: 215 84% 25%;
+    --accent-foreground: 0 0% 98%;
+    --accent-light: 215 84% 35%;
+    --accent-muted: 215 30% 20%;
+
+    --gold: 45 93% 55%;
+    --gold-foreground: 215 28% 8%;
+    --gold-light: 45 93% 65%;
+    --gold-muted: 45 20% 15%;
+
+    --secondary: 215 16% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 215 16% 12%;
+    --muted-foreground: 215 13% 65%;
+
+    --card: 215 28% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 215 28% 10%;
+    --popover-foreground: 0 0% 98%;
+    --border: 215 14% 20%;
+    --input: 215 14% 20%;
+    --ring: 192 84% 55%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 76% 45%;
+    --success-foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-balance;
+  }
+}
+
+@layer components {
+  /* Hero gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  /* Professional hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg;
+  }
+
+  /* Smooth fade in animation */
+  .fade-in {
+    @apply opacity-0 translate-y-4 transition-all duration-700;
+  }
+
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Professional button variants */
+  .btn-professional {
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-primary-light hover:shadow-professional;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-accent-light hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
+  }
+
+  /* Professional card */
+  .card-professional {
+    @apply bg-card border border-border rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300;
+  }
+}
