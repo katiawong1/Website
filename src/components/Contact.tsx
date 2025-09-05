@@ -70,7 +70,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Contact form - wider, takes 2 columns */}
           <div className="lg:col-span-2 fade-in">
             <div className="card-professional h-full">

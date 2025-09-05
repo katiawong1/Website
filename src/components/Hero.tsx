@@ -78,7 +78,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen bg-gradient-subtle flex items-center">
+    <section id="home" className="relative min-h-screen bg-[#eeeeee] flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left column - Content */}
@@ -102,7 +102,7 @@ const Hero = () => {
             </div>
 
             {/* Multi-step Contact form */}
-            <div className="card-professional max-w-md">
+            <div className="card-professional max-w-md w-full">
               <div className="mb-4">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-sm font-medium text-muted-foreground">
@@ -277,10 +277,10 @@ const Hero = () => {
           </div>
 
           {/* Right column - Image */}
-          <div className="lg:flex justify-center fade-in">
+          <div className="flex justify-center fade-in mt-8 lg:mt-0">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-hero rounded-2xl blur-3xl opacity-20 animate-float"></div>
-              <div className="relative z-10 w-full max-w-lg rounded-2xl shadow-professional hover-lift overflow-hidden">
+              <div className="relative z-10 w-full max-w-sm sm:max-w-md lg:max-w-lg rounded-2xl shadow-professional hover-lift overflow-hidden">
                 <div className="aspect-[4/5] w-full">
                   <img
                     src={advisorImageUrl}

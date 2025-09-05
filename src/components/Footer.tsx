@@ -28,7 +28,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main footer content */}
         <div className="py-16">
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {/* Company info */}
             <div className="lg:col-span-1">
               <div className="mb-6">
@@ -133,22 +133,20 @@ const Footer = () => {
 
         {/* Bottom footer */}
         <div className="border-t border-white/20 py-8">
-          <div className="md:flex md:items-center md:justify-between">
-            <div className="text-sm text-primary-foreground/80">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div className="text-sm text-primary-foreground/80 text-center md:text-left">
               © {currentYear} EW CPA Tax & Bookkeeping LLC. All rights reserved.
             </div>
-            <div className="mt-4 md:mt-0">
-              <div className="flex space-x-6 text-sm text-primary-foreground/80">
-                <a href="https://www.privacypolicies.com/live/753b7dea-bbac-4a94-aa58-0020e9f525f9" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                  Privacy Policy
-                </a>
-                <a href="https://www.privacypolicies.com/live/4d218282-50b2-418f-870e-13bb7f7fab09" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                  Terms of Service
-                </a>
-                <a href="https://www.privacypolicies.com/live/9f9381cb-e5ad-4137-b12f-656c286eae6e" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                  Cookie Policy
-                </a>
-              </div>
+            <div className="flex flex-wrap justify-center md:justify-end gap-4 text-sm text-primary-foreground/80">
+              <a href="https://www.privacypolicies.com/live/753b7dea-bbac-4a94-aa58-0020e9f525f9" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                Privacy Policy
+              </a>
+              <a href="https://www.privacypolicies.com/live/4d218282-50b2-418f-870e-13bb7f7fab09" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                Terms of Service
+              </a>
+              <a href="https://www.privacypolicies.com/live/9f9381cb-e5ad-4137-b12f-656c286eae6e" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                Cookie Policy
+              </a>
             </div>
           </div>
           

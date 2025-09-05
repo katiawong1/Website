@@ -18,12 +18,12 @@ const Header = () => {
       {/* Top contact bar */}
       <div className="bg-primary text-primary-foreground py-2 px-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
-          <div className="flex items-center space-x-6">
-            <a href="tel:+17372647589" className="flex items-center space-x-2 hover:text-accent-light transition-colors">
-              <Phone className="h-4 w-4" />
-              <span>(737) 264-7589</span>
+          <div className="flex items-center space-x-3 sm:space-x-6">
+            <a href="tel:+17372647589" className="flex items-center space-x-1 sm:space-x-2 hover:text-accent-light transition-colors">
+              <Phone className="h-3 w-3 sm:h-4 sm:w-4" />
+              <span className="text-xs sm:text-sm">(737) 264-7589</span>
             </a>
-            <a href="mailto:info@e-taxcpa.com" className="flex items-center space-x-2 hover:text-accent-light transition-colors">
+            <a href="mailto:info@e-taxcpa.com" className="hidden sm:flex items-center space-x-2 hover:text-accent-light transition-colors">
               <Mail className="h-4 w-4" />
               <span>info@e-taxcpa.com</span>
             </a>
@@ -40,8 +40,9 @@ EW CPA TAX & BOOKKEEPING LLC
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="#home" className="text-2xl font-bold gradient-text">
-              EW CPA TAX & BOOKKEEPING LLC
+              <a href="#home" className="text-lg sm:text-xl lg:text-2xl font-bold gradient-text">
+              <span className="hidden sm:inline">EW CPA TAX & BOOKKEEPING LLC</span>
+              <span className="sm:hidden">EW CPA</span>
               </a>
             </div>
 

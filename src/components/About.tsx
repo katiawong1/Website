@@ -46,7 +46,7 @@ const About = () => {
           </div>
 
           {/* Main content - 2 columns */}
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* Left column - Professional Image */}
             <div className="fade-in">
               <div className="relative">
@@ -75,8 +75,8 @@ const About = () => {
                 </p>
                 
                 {/* Professional Certifications */}
-                <div className="flex justify-center items-center gap-4 mt-6">
-                  <div className="w-24 h-24">
+                <div className="flex justify-center items-center gap-2 sm:gap-4 mt-6 flex-wrap">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24">
                     <img
                       src="https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/badge_CPA.png"
                       alt="Certified Public Accountant (CPA) Badge"
@@ -84,7 +84,7 @@ const About = () => {
                       loading="lazy"
                     />
                   </div>
-                  <div className="w-60">
+                  <div className="w-40 sm:w-48 lg:w-60">
                     <img
                       src="https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/badge_EnrolledAgent.png"
                       alt="Enrolled Agent Badge"
@@ -92,7 +92,7 @@ const About = () => {
                       loading="lazy"
                     />
                   </div>
-                  <div className="w-24 h-24">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24">
                     <img
                       src="https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/badge_CertifiedTaxCoach.png"
                       alt="Certified Tax Coach Badge"
