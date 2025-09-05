@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Linkedin, Facebook, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,19 +15,12 @@ const Footer = () => {
       { name: "Our Team", href: "#about" },
       { name: "Testimonials", href: "#client-testimonials" },
       { name: "Contact", href: "#contact" }
-    ],
-    resources: [
-      { name: "Tax Tips", href: "#" },
-      { name: "Tax Calendar", href: "#" },
-      { name: "Resources", href: "#" },
-      { name: "FAQ", href: "#" }
     ]
   };
 
   const socialLinks = [
-    { icon: <Linkedin className="h-5 w-5" />, href: "#", label: "LinkedIn" },
-    { icon: <Facebook className="h-5 w-5" />, href: "#", label: "Facebook" },
-    { icon: <Twitter className="h-5 w-5" />, href: "#", label: "Twitter" }
+    { icon: <Facebook className="h-5 w-5" />, href: "https://www.facebook.com/ewCPAtax/", label: "Facebook" },
+    { icon: <Instagram className="h-5 w-5" />, href: "https://www.instagram.com/us.tax/", label: "Instagram" }
   ];
 
   return (
@@ -46,42 +39,6 @@ const Footer = () => {
                   Your trusted CPA tax advisor serving clients nationwide. 
                   Providing professional tax services with integrity and expertise for over 10 years.
                 </p>
-              </div>
-
-              {/* Contact info */}
-              <div className="space-y-3">
-                <a 
-                  href="tel:+17372647589"
-                  className="flex items-center space-x-3 text-primary-foreground/80 hover:text-white transition-colors"
-                >
-                  <Phone className="h-4 w-4" />
-                  <span>(737) 264-7589</span>
-                </a>
-                <a 
-                  href="mailto:info@e-taxcpa.com"
-                  className="flex items-center space-x-3 text-primary-foreground/80 hover:text-white transition-colors"
-                >
-                  <Mail className="h-4 w-4" />
-                  <span>info@e-taxcpa.com</span>
-                </a>
-                <div className="flex items-center space-x-3 text-primary-foreground/80">
-                  <MapPin className="h-4 w-4" />
-                  <span>Serving Clients Nationwide</span>
-                </div>
-              </div>
-
-              {/* Social links */}
-              <div className="flex space-x-4 mt-6">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    aria-label={social.label}
-                    className="text-primary-foreground/80 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-lg"
-                  >
-                    {social.icon}
-                  </a>
-                ))}
               </div>
             </div>
 
@@ -123,26 +80,54 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Resources */}
+            {/* Contact Information */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-6">
-                Resources
+                Contact Information
               </h4>
-              <ul className="space-y-3">
-                {footerLinks.resources.map((link, index) => (
-                  <li key={index}>
+              
+              {/* Contact details */}
+              <div className="space-y-3 mb-6">
+                <a 
+                  href="tel:+17372647589"
+                  className="flex items-center space-x-3 text-primary-foreground/80 hover:text-white transition-colors"
+                >
+                  <Phone className="h-4 w-4" />
+                  <span>(737) 264-7589</span>
+                </a>
+                <a 
+                  href="mailto:info@e-taxcpa.com"
+                  className="flex items-center space-x-3 text-primary-foreground/80 hover:text-white transition-colors"
+                >
+                  <Mail className="h-4 w-4" />
+                  <span>info@e-taxcpa.com</span>
+                </a>
+                <div className="flex items-center space-x-3 text-primary-foreground/80">
+                  <MapPin className="h-4 w-4" />
+                  <span>Serving Clients Nationwide</span>
+                </div>
+              </div>
+
+              {/* Social links */}
+              <div>
+                <h5 className="text-sm font-semibold text-white mb-3">Follow Us</h5>
+                <div className="flex space-x-3">
+                  {socialLinks.map((social, index) => (
                     <a
-                      href={link.href}
-                      className="text-primary-foreground/80 hover:text-white transition-colors"
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.label}
+                      className="text-primary-foreground/80 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-lg"
                     >
-                      {link.name}
+                      {social.icon}
                     </a>
-                  </li>
-                ))}
-              </ul>
-
-
+                  ))}
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
 
@@ -154,13 +139,13 @@ const Footer = () => {
             </div>
             <div className="mt-4 md:mt-0">
               <div className="flex space-x-6 text-sm text-primary-foreground/80">
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="https://www.privacypolicies.com/live/753b7dea-bbac-4a94-aa58-0020e9f525f9" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   Privacy Policy
                 </a>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="https://www.privacypolicies.com/live/4d218282-50b2-418f-870e-13bb7f7fab09" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   Terms of Service
                 </a>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="https://www.privacypolicies.com/live/9f9381cb-e5ad-4137-b12f-656c286eae6e" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   Cookie Policy
                 </a>
               </div>

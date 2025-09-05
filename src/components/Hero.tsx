@@ -6,16 +6,16 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle, ArrowRight, ArrowLeft } from "lucide-react";
-const advisorImageUrl = "https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/kate_wong_edited_light_grey_001.jpeg";
+const advisorImageUrl = "https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/kate_wong_edited_light_blue_001.png";
 
 const Hero = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
-    businessOwner: "",
+    taxPlanning: "yes",
+    discoveryCall: "yes",
+    businessOwner: "yes",
     name: "",
     email: "",
-    employeeCount: "",
-    businessDuration: "",
     helpNeeded: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -54,11 +54,11 @@ const Hero = () => {
         alert('Thank you! Your information has been submitted successfully.');
         // Reset form
         setFormData({
-          businessOwner: "",
+          taxPlanning: "yes",
+          discoveryCall: "yes",
+          businessOwner: "yes",
           name: "",
           email: "",
-          employeeCount: "",
-          businessDuration: "",
           helpNeeded: ""
         });
         setCurrentStep(1);
@@ -89,15 +89,15 @@ const Hero = () => {
               </span>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-              LOOKING FOR A{" "}
-              <span className="gradient-text">CPA TAX ADVISOR</span>{" "}
-              YOU CAN TRUST?
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+              NEED A CPA WHO{" "}
+              <span className="gradient-text">SPECIALIZES IN</span>{" "}
+              TAX PLANNING?
             </h1>
             
             <div className="mb-8">
-              <h2 className="text-2xl lg:text-3xl font-bold text-accent mb-4">
-                AND WE CAN HELP.
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent mb-4">
+                WE'VE GOT YOU COVERED.
               </h2>
             </div>
 
@@ -122,22 +122,43 @@ const Hero = () => {
               </div>
 
               <form onSubmit={currentStep === 4 ? handleSubmit : handleNext} className="space-y-6">
-                {/* Step 1: Business Owner + Contact Info */}
+                {/* Step 1: Tax Planning */}
                 {currentStep === 1 && (
+                  <div>
+                    <Label className="text-lg font-semibold mb-4 block">
+                      Are you looking for help with proactive tax planning?
+                    </Label>
+                    <RadioGroup value={formData.taxPlanning} onValueChange={(value) => updateFormData('taxPlanning', value)}>
+                      <div className="flex items-center space-x-6">
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="yes" id="tax-planning-yes" />
+                          <Label htmlFor="tax-planning-yes">Yes</Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="no" id="tax-planning-no" />
+                          <Label htmlFor="tax-planning-no">No</Label>
+                        </div>
+                      </div>
+                    </RadioGroup>
+                  </div>
+                )}
+
+                {/* Step 2: Discovery Call + Contact Info */}
+                {currentStep === 2 && (
                   <>
                     <div>
                       <Label className="text-lg font-semibold mb-4 block">
-                        Do you own a business?
+                        Interested in a complimentary tax planning discovery call?
                       </Label>
-                      <RadioGroup value={formData.businessOwner} onValueChange={(value) => updateFormData('businessOwner', value)}>
+                      <RadioGroup value={formData.discoveryCall} onValueChange={(value) => updateFormData('discoveryCall', value)}>
                         <div className="flex items-center space-x-6">
                           <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="yes" id="yes" />
-                            <Label htmlFor="yes">Yes</Label>
+                            <RadioGroupItem value="yes" id="discovery-yes" />
+                            <Label htmlFor="discovery-yes">Yes</Label>
                           </div>
                           <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="no" id="no" />
-                            <Label htmlFor="no">No</Label>
+                            <RadioGroupItem value="no" id="discovery-no" />
+                            <Label htmlFor="discovery-no">No</Label>
                           </div>
                         </div>
                       </RadioGroup>
@@ -167,48 +188,24 @@ const Hero = () => {
                   </>
                 )}
 
-                {/* Step 2: Employee Count */}
-                {currentStep === 2 && (
-                  <div>
-                    <Label className="text-lg font-semibold mb-4 block">
-                      How many employees do you have?
-                    </Label>
-                    <Select value={formData.employeeCount} onValueChange={(value) => updateFormData('employeeCount', value)}>
-                      <SelectTrigger className="h-12">
-                        <SelectValue placeholder="Select employee count" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="just-me">Just me</SelectItem>
-                        <SelectItem value="1-5">1-5 employees</SelectItem>
-                        <SelectItem value="6-10">6-10 employees</SelectItem>
-                        <SelectItem value="11-25">11-25 employees</SelectItem>
-                        <SelectItem value="26-50">26-50 employees</SelectItem>
-                        <SelectItem value="51-100">51-100 employees</SelectItem>
-                        <SelectItem value="100+">100+ employees</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                )}
-
-                {/* Step 3: Business Duration */}
+                {/* Step 3: Business Owner */}
                 {currentStep === 3 && (
                   <div>
                     <Label className="text-lg font-semibold mb-4 block">
-                      How long have you been operating your business?
+                      Do you own a business?
                     </Label>
-                    <Select value={formData.businessDuration} onValueChange={(value) => updateFormData('businessDuration', value)}>
-                      <SelectTrigger className="h-12">
-                        <SelectValue placeholder="Select business duration" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="less-than-1">Less than 1 year</SelectItem>
-                        <SelectItem value="1-2">1-2 years</SelectItem>
-                        <SelectItem value="3-5">3-5 years</SelectItem>
-                        <SelectItem value="6-10">6-10 years</SelectItem>
-                        <SelectItem value="11-20">11-20 years</SelectItem>
-                        <SelectItem value="20+">20+ years</SelectItem>
-                      </SelectContent>
-                    </Select>
+                    <RadioGroup value={formData.businessOwner} onValueChange={(value) => updateFormData('businessOwner', value)}>
+                      <div className="flex items-center space-x-6">
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="yes" id="business-yes" />
+                          <Label htmlFor="business-yes">Yes</Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="no" id="business-no" />
+                          <Label htmlFor="business-no">No</Label>
+                        </div>
+                      </div>
+                    </RadioGroup>
                   </div>
                 )}
 
@@ -263,14 +260,14 @@ const Hero = () => {
             </div>
 
             {/* Trust indicators */}
-            <div className="mt-8 flex items-center space-x-6 text-sm text-muted-foreground">
+            <div className="mt-8 flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-4 w-4 text-success" />
                 <span>Licensed CPA</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-4 w-4 text-success" />
-                <span>20+ Years Experience</span>
+                <span>15+ Years Experience</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-4 w-4 text-success" />

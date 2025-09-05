@@ -11,7 +11,7 @@ const Services = () => {
       id: "tax-planning",
       icon: <TrendingUp className="h-8 w-8" />,
       title: "Tax Planning",
-      description: "Legal strategies to help you keep more of what you earn.",
+      description: "Build a strategy that saves you money now and in the future.",
       details: {
         subtitle: "Maximize your savings and avoid costly mistakes with expert tax planning that helps you identify every opportunity to reduce your tax burden",
         features: [
@@ -33,7 +33,7 @@ const Services = () => {
       id: "tax-preparation",
       icon: <FileText className="h-8 w-8" />,
       title: "Tax Preparation",
-      description: "Individual & business returns prepared and e-filed.",
+      description: "Stress-free tax filing - for personal and business tax returns.",
       details: {
         subtitle: "From personal to business taxes, we provide thorough, accurate preparation to save you time and money.",
         features: [
@@ -53,7 +53,7 @@ const Services = () => {
       id: "bookkeeping",
       icon: <BookOpen className="h-8 w-8" />,
       title: "Bookkeeping",
-      description: "Monthly/quarterly books with reports and advisory.",
+      description: "Expert bookkeeping for growing businesses - financial clarity you can count on.",
       details: {
         subtitle: "Professional bookkeeping services designed to support your business growth and financial clarity.",
         features: [
@@ -79,23 +79,23 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-20 bg-[#eeeeee]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16 fade-in">
           <span className="inline-block px-4 py-2 bg-accent-muted text-accent rounded-full text-sm font-semibold mb-4">
             OUR SERVICES
           </span>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             What We Do
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Comprehensive tax return preparation, strategic tax planning, and efficient bookkeeping to keep your finances organized, reduce tax liabilities, and help your business grow.
           </p>
         </div>
 
         {/* Services grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={service.id}
@@ -205,10 +205,10 @@ const Services = () => {
         {/* CTA section */}
         <div className="text-center mt-16 fade-in">
           <div className="bg-gradient-hero rounded-2xl p-8 lg:p-12 text-center">
-            <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
               Ready to Optimize Your Taxes?
             </h3>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Let's discuss your specific situation and create a personalized tax strategy that works for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

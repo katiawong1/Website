@@ -1,7 +1,7 @@
 import { Award, Users, Clock, Star } from "lucide-react";
 
 const About = () => {
-  const portraitImageUrl = "https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/kate_wong_edited_light_grey_002.jpeg";
+  const portraitImageUrl = "https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/kate_wong_edited_black_001.png";
   const stats = [
     {
       icon: <Users className="h-8 w-8" />,
@@ -10,7 +10,7 @@ const About = () => {
     },
     {
       icon: <Clock className="h-8 w-8" />,
-      number: "10+",
+      number: "15+",
       label: "Years Experience"
     },
     {
@@ -20,7 +20,7 @@ const About = () => {
     },
     {
       icon: <Star className="h-8 w-8" />,
-      number: "4.9",
+      number: "5.0",
       label: "Average Rating"
     }
   ];
@@ -28,18 +28,18 @@ const About = () => {
   return (
     <>
       {/* About Section */}
-      <section id="about" className="py-20 bg-muted/30">
+      <section id="about" className="py-20 bg-[#eeeeee]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section header */}
           <div className="text-center mb-16 fade-in">
             <span className="inline-block px-4 py-2 bg-accent-muted text-accent rounded-full text-sm font-semibold mb-4">
               ABOUT US
             </span>
-                      <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+                      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             Your Trusted{" "}
             <span className="gradient-text">Tax Partner</span>
           </h2>
-                      <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                      <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             With over a decade of experience serving businesses and individuals, 
             we've built our reputation on delivering exceptional service with a personal touch.
           </p>
@@ -70,9 +70,37 @@ const About = () => {
               <div className="mb-8 card-professional text-center">
                 <h3 className="text-xl font-bold mb-2">Katia Wong, CPA</h3>
                 <p className="text-accent font-semibold mb-2">Licensed Tax Professional</p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground mb-4">
                   "Excellence in service, integrity in practice"
                 </p>
+                
+                {/* Professional Certifications */}
+                <div className="flex justify-center items-center gap-4 mt-6">
+                  <div className="w-24 h-24">
+                    <img
+                      src="https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/badge_CPA.png"
+                      alt="Certified Public Accountant (CPA) Badge"
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="w-60">
+                    <img
+                      src="https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/badge_EnrolledAgent.png"
+                      alt="Enrolled Agent Badge"
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="w-24 h-24">
+                    <img
+                      src="https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/badge_CertifiedTaxCoach.png"
+                      alt="Certified Tax Coach Badge"
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
               </div>
 
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
@@ -83,9 +111,9 @@ const About = () => {
                 </p>
                 
                 <p>
-                  Certified as a Tax Planner, Katia specializes in strategic tax planning. After gaining experience at a Big 4 
-                  accounting firm, she launched her own practice. Committed to staying up-to-date with tax laws, Katia delivers 
-                  reliable, high-quality service with a direct, honest approach.
+                Certified as a Tax Planner, Katia specializes in strategic tax planning. After gaining valuable experience at a Big 4 
+                accounting firm, she launched her own practice. Committed to staying current with evolving tax laws, Katia delivers 
+                reliable, high-quality service with a direct and honest approach.
                 </p>
                 
                 <p>
@@ -138,10 +166,10 @@ const About = () => {
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
               OUR TRACK RECORD
             </span>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               Trusted Nationwide for Over 10 Years
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
               Our commitment to excellence has earned us the trust of hundreds of clients across the nation.
             </p>
           </div>
@@ -168,10 +196,10 @@ const About = () => {
 
           <div className="text-center mt-16 fade-in">
             <div className="bg-gradient-subtle rounded-2xl p-8 lg:p-12 max-w-4xl mx-auto">
-              <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4">
                 Ready to Join Our Satisfied Clients?
               </h3>
-              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
                 Experience the difference that personalized, professional tax services can make for your financial future.
               </p>
               <button 

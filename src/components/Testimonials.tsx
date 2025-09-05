@@ -102,7 +102,7 @@ const Testimonials = () => {
         <div className="text-center mt-16 fade-in">
           <div className="inline-flex items-center space-x-4 bg-success/10 text-success px-6 py-3 rounded-full">
             <Star className="h-5 w-5 fill-current" />
-            <span className="font-semibold">4.9/5 Average Rating</span>
+            <span className="font-semibold">5.0/5 Average Rating</span>
             <span className="text-muted-foreground">•</span>
             <span className="font-semibold">500+ Happy Clients</span>
           </div>

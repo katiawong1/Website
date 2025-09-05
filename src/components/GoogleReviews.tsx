@@ -30,8 +30,52 @@ const GoogleReviews = ({ placeId, className = "" }: GoogleReviewsProps) => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!placeId) {
-      setError('Place ID is required');
+    if (!placeId || placeId === 'YOUR_PLACE_ID_HERE') {
+      // Show fallback reviews when no valid Place ID is configured
+      const mockPlaceDetails: PlaceDetails = {
+        name: "EW CPA Tax & Bookkeeping LLC",
+        rating: 5.0,
+        user_ratings_total: 33,
+        reviews: [
+          {
+            author_name: "R.R.",
+            language: "en",
+            profile_photo_url: "",
+            rating: 5,
+            relative_time_description: "4 months ago",
+            text: "Katia is very patient in responding all your queries, she has extensive knowledge and experience on any type of Tax queries, she also has a good knowledge on various Visa types and how the tax system works for different Visas. During my tax preparation, she provided detailed explanations and made the process smooth.",
+            time: Date.now() - 120 * 24 * 60 * 60 * 1000,
+          },
+          {
+            author_name: "A.M.",
+            language: "en",
+            profile_photo_url: "",
+            rating: 5,
+            relative_time_description: "5 months ago",
+            text: "I've been filing my taxes with Ekaterina's assistance for several years, and she has consistently done an excellent job. Her work is thorough, reliable, and I've never encountered any issues throughout the process.",
+            time: Date.now() - 150 * 24 * 60 * 60 * 1000,
+          },
+          {
+            author_name: "M.A.",
+            language: "en",
+            profile_photo_url: "",
+            rating: 5,
+            relative_time_description: "4 months ago",
+            text: "I had a great experience working with Katia! She was professional, knowledgeable, and made the entire process easy to understand. We communicated entirely online, and everything was super easy and smooth. Highly recommend her services!",
+            time: Date.now() - 120 * 24 * 60 * 60 * 1000,
+          },
+          {
+            author_name: "R.G.",
+            language: "en",
+            profile_photo_url: "",
+            rating: 5,
+            relative_time_description: "5 months ago",
+            text: "I have worked with several CPAs but Katia outshines them all BY MILES. She is responsive, helpful, and really gets into all the details to make sure she's got my correct information. Her software system is easy to use and thanks to her expertise, my tax process is seamless.",
+            time: Date.now() - 150 * 24 * 60 * 60 * 1000,
+          }
+        ]
+      };
+      setPlaceDetails(mockPlaceDetails);
       setLoading(false);
       return;
     }

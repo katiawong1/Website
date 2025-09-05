@@ -5,17 +5,17 @@ const LocationAndReviews = () => {
   return (
     <>
       {/* Service Area Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-[#eeeeee]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in">
             <span className="inline-block px-4 py-2 bg-accent-muted text-accent rounded-full text-sm font-semibold mb-4">
               SERVICE AREA
             </span>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               Serving Clients{" "}
               <span className="gradient-text">Nationwide</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
               We proudly serve clients across the United States. 
               Our expertise ensures you get the best tax strategies regardless of your location.
             </p>
@@ -24,8 +24,8 @@ const LocationAndReviews = () => {
           <div className="max-w-4xl mx-auto">
             <div className="fade-in">
               <div className="card-professional text-center">
-                <h3 className="text-2xl font-bold mb-6">How We Serve You Nationwide</h3>
-                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <h3 className="text-xl sm:text-2xl font-bold mb-6">How We Serve You Nationwide</h3>
+                <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                   <div className="space-y-3">
                     <div className="w-12 h-12 bg-accent rounded-full mx-auto flex items-center justify-center">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,10 +77,10 @@ const LocationAndReviews = () => {
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
               CLIENT TESTIMONIALS
             </span>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               What Our Clients Say
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
               Don't just take our word for it. See what our satisfied clients have to say about our tax services.
             </p>
           </div>

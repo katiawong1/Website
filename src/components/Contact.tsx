@@ -48,23 +48,23 @@ const Contact = () => {
     {
       icon: <Clock className="h-6 w-6" />,
       title: "Business Hours",
-      details: "Mon-Fri: 9AM-6PM",
+      details: "Mon-Fri: 9AM-6PM CST",
       action: null
     }
   ];
 
   return (
-    <section id="contact" className="py-20 bg-muted/30">
+    <section id="contact" className="py-20 bg-[#eeeeee]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16 fade-in">
           <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
             GET IN TOUCH
           </span>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Contact us today for a free consultation. Let's discuss how we can help 
             optimize your taxes and secure your financial future.
           </p>
