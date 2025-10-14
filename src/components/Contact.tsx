@@ -25,7 +25,7 @@ const Contact = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          to: 'anton.osipov@daveenci.com',
+          to: 'info@e-taxcpa.com',
           subject: 'New Contact Form Submission',
           formData
         }),
@@ -105,10 +105,10 @@ const Contact = () => {
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Contact form - wider, takes 2 columns */}
           <div className="lg:col-span-2 fade-in">
-            <div className="card-professional h-full">
+            <div className="card-professional lg:h-full">
               <h3 className="text-2xl font-bold mb-8">Send us a Message</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6 h-full flex flex-col">
+              <form onSubmit={handleSubmit} className="space-y-6 lg:h-full lg:flex lg:flex-col">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <Label htmlFor="name" className="text-sm font-medium mb-2 block">
@@ -171,7 +171,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" className="btn-professional w-full group mt-auto" disabled={isSubmitting}>
+                <Button type="submit" className="btn-professional w-full group lg:mt-auto" disabled={isSubmitting}>
                   <Send className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>

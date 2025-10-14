@@ -44,7 +44,7 @@ const Hero = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          to: 'anton.osipov@daveenci.com',
+          to: 'info@e-taxcpa.com',
           subject: 'New CPA Consultation Request',
           formData
         }),
