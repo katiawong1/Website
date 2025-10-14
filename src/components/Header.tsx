@@ -23,9 +23,9 @@ const Header = () => {
               <Phone className="h-3 w-3 sm:h-4 sm:w-4" />
               <span className="text-xs sm:text-sm">(737) 264-7589</span>
             </a>
-            <a href="mailto:info@e-taxcpa.com" className="hidden sm:flex items-center space-x-2 hover:text-accent-light transition-colors">
-              <Mail className="h-4 w-4" />
-              <span>info@e-taxcpa.com</span>
+            <a href="mailto:info@e-taxcpa.com" className="flex items-center space-x-1 sm:space-x-2 hover:text-accent-light transition-colors">
+              <Mail className="h-3 w-3 sm:h-4 sm:w-4" />
+              <span className="text-xs sm:text-sm">info@e-taxcpa.com</span>
             </a>
           </div>
           <div className="hidden md:block text-xs">
