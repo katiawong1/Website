@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,8 +7,7 @@ const Footer = () => {
     services: [
       { name: "Tax Planning", href: "#services" },
       { name: "Tax Preparation", href: "#services" },
-      { name: "Bookkeeping", href: "#services" },
-      { name: "Business Advisory", href: "#services" }
+      { name: "Bookkeeping", href: "#services" }
     ],
     company: [
       { name: "About Us", href: "#about" },
@@ -20,6 +19,7 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: <Facebook className="h-5 w-5" />, href: "https://www.facebook.com/ewCPAtax/", label: "Facebook" },
+    { icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/in/ekaterina-katia-wong-cpa-ea-ctc-a801a5a7/", label: "LinkedIn" },
     { icon: <Instagram className="h-5 w-5" />, href: "https://www.instagram.com/us.tax/", label: "Instagram" }
   ];
 
@@ -37,7 +37,7 @@ const Footer = () => {
                 </h3>
                 <p className="text-primary-foreground/80 leading-relaxed">
                   Your trusted CPA tax advisor serving clients nationwide. 
-                  Providing professional tax services with integrity and expertise for over 10 years.
+                  Providing professional tax services with integrity and expertise for over 15 years.
                 </p>
               </div>
             </div>

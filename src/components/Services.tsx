@@ -5,6 +5,7 @@ import { Calculator, FileText, BookOpen, TrendingUp, Shield, Clock, X } from "lu
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [openDialog, setOpenDialog] = useState<string | null>(null);
 
   const services = [
     {
@@ -72,7 +73,7 @@ const Services = () => {
         pricing: [
           "Monthly fees start at $250/month",
           "Quarterly fees start at $595/quarter",
-          "Annual Cleanups, Catchups or New Businesses: Contact me for a custom quote!"
+          "Annual Cleanups, Catchups or New Businesses: Contact us for a custom quote!"
         ]
       }
     }
@@ -114,12 +115,15 @@ const Services = () => {
                 {service.description}
               </p>
 
-              <Dialog>
+              <Dialog open={openDialog === service.id} onOpenChange={(open) => setOpenDialog(open ? service.id : null)}>
                 <DialogTrigger asChild>
                   <Button 
                     variant="outline" 
                     className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300"
-                    onClick={() => setSelectedService(service.id)}
+                    onClick={() => {
+                      setSelectedService(service.id);
+                      setOpenDialog(service.id);
+                    }}
                   >
                     Learn More
                   </Button>
@@ -188,11 +192,34 @@ const Services = () => {
                     )}
 
                     <div className="flex gap-4 pt-4">
-                      <Button className="btn-professional flex-1" asChild>
-                        <a href="#contact">Get Started</a>
+                      <Button 
+                        className="btn-professional flex-1"
+                        onClick={() => {
+                          setOpenDialog(null);
+                          setTimeout(() => {
+                            const contactSection = document.querySelector('#contact');
+                            if (contactSection) {
+                              contactSection.scrollIntoView({ behavior: 'smooth' });
+                            }
+                          }, 100);
+                        }}
+                      >
+                        Get Started
                       </Button>
-                      <Button variant="outline" className="flex-1" asChild>
-                        <a href="#contact">Contact Us</a>
+                      <Button 
+                        variant="outline" 
+                        className="flex-1"
+                        onClick={() => {
+                          setOpenDialog(null);
+                          setTimeout(() => {
+                            const contactSection = document.querySelector('#contact');
+                            if (contactSection) {
+                              contactSection.scrollIntoView({ behavior: 'smooth' });
+                            }
+                          }, 100);
+                        }}
+                      >
+                        Contact Us
                       </Button>
                     </div>
                   </div>

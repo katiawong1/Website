@@ -41,8 +41,7 @@ EW CPA TAX & BOOKKEEPING LLC
             {/* Logo */}
             <div className="flex-shrink-0">
               <a href="#home" className="text-lg sm:text-xl lg:text-2xl font-bold gradient-text">
-              <span className="hidden sm:inline">EW CPA TAX & BOOKKEEPING LLC</span>
-              <span className="sm:hidden">EW CPA</span>
+              EW CPA TAX & BOOKKEEPING LLC
               </a>
             </div>
 

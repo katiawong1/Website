@@ -44,7 +44,7 @@ const Hero = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          to: 'info@e-taxcpa.com',
+          to: 'anton.osipov@daveenci.com',
           subject: 'New CPA Consultation Request',
           formData
         }),
@@ -79,24 +79,24 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen bg-[#eeeeee] flex items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-14">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left column - Content */}
           <div className="fade-in">
-            <div className="mb-6">
-              <span className="inline-block px-4 py-2 bg-accent-muted text-accent rounded-full text-sm font-semibold mb-4">
+            <div className="mb-4 sm:mb-6">
+              <span className="inline-block px-4 py-2 bg-accent-muted text-accent rounded-full text-sm font-semibold mb-3 sm:mb-4">
                 CPA TAX ADVISOR NATIONWIDE
               </span>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-              NEED A CPA WHO{" "}
-              <span className="gradient-text">SPECIALIZES IN</span>{" "}
-              TAX PLANNING?
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+              OVERPAYING IN TAXES? WORK WITH A CPA WHO{" "}
+              <span className="gradient-text">SPECIALIZES IN STRATEGIC</span>{" "}
+              TAX PLANNING!
             </h1>
             
-            <div className="mb-8">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent mb-4">
+            <div className="mb-6 sm:mb-8">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent mb-3 sm:mb-4">
                 WE'VE GOT YOU COVERED.
               </h2>
             </div>
@@ -260,7 +260,7 @@ const Hero = () => {
             </div>
 
             {/* Trust indicators */}
-            <div className="mt-8 flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
+            <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-4 w-4 text-success" />
                 <span>Licensed CPA</span>
@@ -277,7 +277,7 @@ const Hero = () => {
           </div>
 
           {/* Right column - Image */}
-          <div className="flex justify-center fade-in mt-8 lg:mt-0">
+          <div className="flex justify-center fade-in mt-6 sm:mt-8 lg:mt-0">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-hero rounded-2xl blur-3xl opacity-20 animate-float"></div>
               <div className="relative z-10 w-full max-w-sm sm:max-w-md lg:max-w-lg rounded-2xl shadow-professional hover-lift overflow-hidden">

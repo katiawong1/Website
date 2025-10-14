@@ -75,19 +75,11 @@ const About = () => {
                 </p>
                 
                 {/* Professional Certifications */}
-                <div className="flex justify-center items-center gap-2 sm:gap-4 mt-6 flex-wrap">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24">
+                <div className="flex justify-center items-center gap-3 sm:gap-4 mt-6 flex-wrap">
+                  <div className="w-28 sm:w-36 lg:w-44">
                     <img
-                      src="https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/badge_CPA.png"
+                      src="https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/badge_CPA_3.png"
                       alt="Certified Public Accountant (CPA) Badge"
-                      className="w-full h-full object-contain"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="w-40 sm:w-48 lg:w-60">
-                    <img
-                      src="https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/badge_EnrolledAgent.png"
-                      alt="Enrolled Agent Badge"
                       className="w-full h-full object-contain"
                       loading="lazy"
                     />
@@ -96,6 +88,14 @@ const About = () => {
                     <img
                       src="https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/badge_CertifiedTaxCoach.png"
                       alt="Certified Tax Coach Badge"
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="w-32 sm:w-40 lg:w-48">
+                    <img
+                      src="https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/badge_EnrolledAgent.png"
+                      alt="Enrolled Agent Badge"
                       className="w-full h-full object-contain"
                       loading="lazy"
                     />

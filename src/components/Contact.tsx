@@ -12,11 +12,43 @@ const Contact = () => {
     phone: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission here
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to: 'anton.osipov@daveenci.com',
+          subject: 'New Contact Form Submission',
+          formData
+        }),
+      });
+
+      if (response.ok) {
+        alert('Thank you! Your message has been sent successfully.');
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: ""
+        });
+      } else {
+        throw new Error('Failed to submit form');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error sending your message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -139,9 +171,9 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" className="btn-professional w-full group mt-auto">
+                <Button type="submit" className="btn-professional w-full group mt-auto" disabled={isSubmitting}>
                   <Send className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
             </div>
