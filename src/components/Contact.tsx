@@ -25,8 +25,7 @@ const Contact = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          to: 'info@e-taxcpa.com',
-          subject: 'New Contact Form Submission',
+          subject: 'New Contact Form Submission - EW CPA Website',
           formData
         }),
       });

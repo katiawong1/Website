@@ -44,8 +44,7 @@ const Hero = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          to: 'info@e-taxcpa.com',
-          subject: 'New CPA Consultation Request',
+          subject: 'New CPA Consultation Request - Hero Intake Form',
           formData
         }),
       });

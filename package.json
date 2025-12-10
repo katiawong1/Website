@@ -62,7 +62,8 @@
     "vaul": "^0.9.9",
     "zod": "^3.25.76",
     "express": "^4.19.2",
-    "nodemailer": "^6.9.8"
+    "@azure/identity": "^4.2.0",
+    "@microsoft/microsoft-graph-client": "^3.0.7"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
