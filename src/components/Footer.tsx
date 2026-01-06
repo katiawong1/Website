@@ -5,15 +5,15 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { name: "Tax Planning", href: "#services" },
-      { name: "Tax Preparation", href: "#services" },
-      { name: "Bookkeeping", href: "#services" }
+      { name: "Tax Planning", href: "/#services" },
+      { name: "Tax Preparation", href: "/#services" },
+      { name: "Bookkeeping", href: "/#services" }
     ],
     company: [
-      { name: "About Us", href: "#about" },
-      { name: "Our Team", href: "#about" },
-      { name: "Testimonials", href: "#client-testimonials" },
-      { name: "Contact", href: "#contact" }
+      { name: "About Us", href: "/#about" },
+      { name: "Our Team", href: "/#about" },
+      { name: "Testimonials", href: "/#client-testimonials" },
+      { name: "Contact", href: "/#contact" }
     ]
   };
 
@@ -36,7 +36,7 @@ const Footer = () => {
                   EW CPA Tax & Bookkeeping LLC
                 </h3>
                 <p className="text-primary-foreground/80 leading-relaxed">
-                  Your trusted CPA tax advisor serving clients nationwide. 
+                  Your trusted CPA tax advisor serving clients nationwide.
                   Providing professional tax services with integrity and expertise for over 15 years.
                 </p>
               </div>
@@ -85,17 +85,17 @@ const Footer = () => {
               <h4 className="text-lg font-semibold text-white mb-6">
                 Contact Information
               </h4>
-              
+
               {/* Contact details */}
               <div className="space-y-3 mb-6">
-                <a 
+                <a
                   href="tel:+17372647589"
                   className="flex items-center space-x-3 text-primary-foreground/80 hover:text-white transition-colors"
                 >
                   <Phone className="h-4 w-4" />
                   <span>(737) 264-7589</span>
                 </a>
-                <a 
+                <a
                   href="mailto:info@e-taxcpa.com"
                   className="flex items-center space-x-3 text-primary-foreground/80 hover:text-white transition-colors"
                 >
@@ -149,10 +149,10 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
+
           <div className="mt-4 text-xs text-primary-foreground/60">
             <p>
-EW CPA Tax & Bookkeeping LLC is a licensed CPA firm serving clients nationwide. 
+              EW CPA Tax & Bookkeeping LLC is a licensed CPA firm serving clients nationwide.
               All tax advice and services are provided in accordance with applicable federal and state regulations.
             </p>
           </div>

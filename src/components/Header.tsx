@@ -6,11 +6,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
-    { name: "Testimonials", href: "#client-testimonials" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/#home" },
+    { name: "Services", href: "/#services" },
+    { name: "About", href: "/#about" },
+    { name: "Testimonials", href: "/#client-testimonials" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -29,7 +29,7 @@ const Header = () => {
             </a>
           </div>
           <div className="hidden md:block text-xs">
-EW CPA TAX & BOOKKEEPING LLC
+            EW CPA TAX & BOOKKEEPING LLC
           </div>
         </div>
       </div>
@@ -40,8 +40,8 @@ EW CPA TAX & BOOKKEEPING LLC
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="#home" className="text-lg sm:text-xl lg:text-2xl font-bold gradient-text">
-              EW CPA TAX & BOOKKEEPING LLC
+              <a href="/" className="text-lg sm:text-xl lg:text-2xl font-bold gradient-text">
+                EW CPA TAX & BOOKKEEPING LLC
               </a>
             </div>
 
@@ -61,7 +61,7 @@ EW CPA TAX & BOOKKEEPING LLC
             {/* CTA button */}
             <div className="hidden md:block">
               <Button className="btn-professional" asChild>
-                <a href="#contact">Get Started</a>
+                <a href="/#contact">Get Started</a>
               </Button>
             </div>
 
@@ -92,7 +92,7 @@ EW CPA TAX & BOOKKEEPING LLC
                 </a>
               ))}
               <Button className="btn-professional w-full mt-4" asChild>
-                <a href="#contact">Get Started</a>
+                <a href="/#contact">Get Started</a>
               </Button>
             </nav>
           </div>

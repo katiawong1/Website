@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -6,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 
 const Contact = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,7 +19,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -31,7 +33,7 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        alert('Thank you! Your message has been sent successfully.');
+        navigate("/thank-you");
         // Reset form
         setFormData({
           name: "",
@@ -96,7 +98,7 @@ const Contact = () => {
             Ready to Get Started?
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Contact us today for a free consultation. Let's discuss how we can help 
+            Contact us today for a free consultation. Let's discuss how we can help
             optimize your taxes and secure your financial future.
           </p>
         </div>
@@ -106,7 +108,7 @@ const Contact = () => {
           <div className="lg:col-span-2 fade-in">
             <div className="card-professional lg:h-full">
               <h3 className="text-2xl font-bold mb-8">Send us a Message</h3>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6 lg:h-full lg:flex lg:flex-col">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
@@ -182,7 +184,7 @@ const Contact = () => {
           <div className="fade-in">
             <div className="card-professional h-full">
               <h3 className="text-xl font-bold mb-6">Contact Information</h3>
-              
+
               {/* Contact methods */}
               <div className="space-y-6 flex-1">
                 {contactInfo.map((info, index) => (

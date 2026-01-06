@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -9,6 +10,7 @@ import { CheckCircle, ArrowRight, ArrowLeft } from "lucide-react";
 const advisorImageUrl = "https://raw.githubusercontent.com/katiawong1/Website-Images/refs/heads/main/kate_wong_edited_light_blue_001.png";
 
 const Hero = () => {
+  const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     taxPlanning: "yes",
@@ -36,7 +38,7 @@ const Hero = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -50,7 +52,7 @@ const Hero = () => {
       });
 
       if (response.ok) {
-        alert('Thank you! Your information has been submitted successfully.');
+        navigate("/thank-you");
         // Reset form
         setFormData({
           taxPlanning: "yes",
@@ -87,13 +89,13 @@ const Hero = () => {
                 CPA TAX ADVISOR NATIONWIDE
               </span>
             </div>
-            
+
             <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               OVERPAYING IN TAXES? WORK WITH A CPA WHO{" "}
               <span className="gradient-text">SPECIALIZES IN STRATEGIC</span>{" "}
               TAX PLANNING!
             </h1>
-            
+
             <div className="mb-6 sm:mb-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent mb-3 sm:mb-4">
                 WE'VE GOT YOU COVERED.
@@ -111,9 +113,8 @@ const Hero = () => {
                     {[1, 2, 3, 4].map((step) => (
                       <div
                         key={step}
-                        className={`w-2 h-2 rounded-full ${
-                          step <= currentStep ? 'bg-accent' : 'bg-muted'
-                        }`}
+                        className={`w-2 h-2 rounded-full ${step <= currentStep ? 'bg-accent' : 'bg-muted'
+                          }`}
                       />
                     ))}
                   </div>
@@ -237,9 +238,9 @@ const Hero = () => {
                       Back
                     </Button>
                   )}
-                  
-                  <Button 
-                    type="submit" 
+
+                  <Button
+                    type="submit"
                     className="btn-professional flex-1 h-12 group"
                     disabled={isSubmitting}
                   >
